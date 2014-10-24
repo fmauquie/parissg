@@ -21,16 +21,8 @@ define([ //
         // We give you an example using the EZ-Web default authentication backend and Spring Security
         .config([
             'ezweb.auth.services.usersProvider', //
-            'ezweb.auth.services.users.backend.defaultProvider', //
-            function (userServiceProvider, defaultUserServiceBackendProvider) {
-                // Always configure the backend you are going to use before
-                // configuring the user service with it (if configuration of the backend is necessary).
-                defaultUserServiceBackendProvider.configure({
-                    // See the file (hopefully soon the docs) to see what options are available.
-                    // Any option not set is kept at default value.
-                    rememberMeParameter: '_spring_security_remember_me'
-                });
-                userServiceProvider.configure('ezweb.auth.services.users.backend.default');
+            function (userServiceProvider) {
+                userServiceProvider.configure('app.services.authentication.backend');
             }
         ]) //
         ;

@@ -1,7 +1,14 @@
 <!-- This line must appear somewhere in your layout -->
-<div class="main-layout container" ng-controller="app.layouts.main.controller">
+<div class="main-layout container" ng-controller="app.layouts.main.controller" ez-user-require-logged-in>
     <ez-app-header>
-
+        <ul ez-login-actions>
+            <li>
+                <a href="#">My Settings</a>
+            </li>
+        </ul>
+        <ul ez-navbar-item class="nav navbar-nav">
+            <li><a href="#">Calendar</a></li>
+        </ul>
     </ez-app-header>
     <ng-view></ng-view>
     <ez-fixed-panel
@@ -45,4 +52,9 @@
             </div>
         </div>
     </ez-fixed-panel>
+</div>
+<div ez-user-require-logged-out>
+    <div ez-center-in-window>
+        <div ez-login-page></div>
+    </div>
 </div>

@@ -5,7 +5,8 @@
  * a part of this feature or directive's module.
  */
 define([ //
-    './exampleService' //
+    './exampleService', //
+    './authenticationBackend' //
     // Require your files here
 ], function () {
     // Using EZWeb module auto-loading
