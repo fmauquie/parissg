@@ -18,7 +18,8 @@
 define([ //
     './home/home', //
     './event/event', //
-    './categories/categories' //
+    './categories/categories', //
+    './event-details/event-details' //
     // Require your files here
 ], function (angular) {
     // Using EZWeb module auto-loading

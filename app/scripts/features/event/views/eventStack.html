@@ -1,11 +1,16 @@
 <div class="event-stack">
-    <!--<div class="left-event-container" ng-click="dislike()">-->
-        <!--Dislike-->
-    <!--</div>-->
-    <!--<div class="right-event-container" ng-click="Like()">-->
-        <!--Like-->
-    <!--</div>-->
+    <div class="event-container left-event-container" ng-click="more()" ng-show="index < data.length">
+        <span>Go!</span>
+    </div>
+    <div class="event-container right-event-container" ng-click="dislike()" ng-show="index < data.length">
+        <span><i class="fa fa-trash-o"></i></span>
+    </div>
+    <div ng-show="index >= data.length">
+        <div class="event-stack-no-element">
+            There's no more events in your area.
+        </div>
+    </div>
     <div ng-repeat="item in data">
-        <div event-item model="item" ng-swipe-left="like()" ng-swipe-right="dislike()" ng-show="item.display"></div>
+        <div event-item model="item" ng-swipe-left="more()" ng-swipe-right="dislike()" ng-show="item.display"></div>
     </div>
 </div>

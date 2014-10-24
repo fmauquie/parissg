@@ -2,7 +2,7 @@
     <div class="event-item-header">
         <ul>
             <li>
-                <i class="fa fa-users">{{model.users}}</i>
+                <h4>{{model.nom}}</h4>
             </li>
             <li>
                 {{model.occurences[0].jour | date}}
@@ -12,8 +12,15 @@
             </li>
         </ul>
     </div>
-    <h4>{{model.nom}}</h4>
+    <div class="event-item-picture">
+
+    </div>
     <p>
         {{model.small_description}}
     </p>
+    <p>
+        <strong>Where?</strong> {{model.lieu}}
+    </p>
+    <div class="event-item-footer">
+    </div>
 </div>

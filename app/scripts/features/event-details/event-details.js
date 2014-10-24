@@ -5,18 +5,17 @@
  */
 define([ //
     'angular', // Always include angular !
-    'text!./event.html', // Include your template file
+    'text!./event-details.html', // Include your template file
     'ez-i18n!./locales', // Include your locales folder
-    './directives/event', //
-    'less!./event' // Include feature-specific stylesheets. You can also use css!./<name>, but this is not recommended
+    'less!./event-details' // Include feature-specific stylesheets. You can also use css!./<name>, but this is not recommended
     // You can require other stuff in the feature as you need it !
-], function (angular, eventTemplate, i18n) {
+], function (angular, eventDetailsTemplate, i18n) {
     'use strict';
 
     // Change your feature name here
-    var featureName = 'events';
+    var featureName = 'eventDetails';
 
-    return angular.module('app.features.event', [ // List the dependencies specific to this feature
+    return angular.module('app.features.event.details', [ // List the dependencies specific to this feature
     ]) //
         // Configure the routes to the feature here. Each feature takes care of its own routes.
         // By convention, the route should start with your feature name ( /home/...)
@@ -27,8 +26,8 @@ define([ //
             '$routeProvider', //
             function($routeProvider){
                 $routeProvider
-                    .when('/events/near', {
-                        template: eventTemplate
+                    .when('/events/event/:id', {
+                        template: eventDetailsTemplate
                     })
             }
         ])
@@ -42,21 +41,14 @@ define([ //
             }
         ]) //
         // We define our controller
-        .controller('app.features.event.controller', [ //
+        .controller('app.features.event.details.controller', [ //
             '$scope', //
             '$routeParams', //
-            'app.services.events', //
-            function ($scope, $routeParams, eventsService) {
+            'app.services.event', //
+            function ($scope, $routeParams, eventService) {
 
-                function processEvent(event){
-                    // TODO call a service
-                    event.users = '3';
-                    event.remainingTime = '3h';
-                    return event;
-                }
-
-                var events = eventsService.query(function(events){
-                    $scope.events = events.map(processEvent);
+                eventService.get({id: $routeParams.id}, function(event){
+                    $scope.event = event;
                 });
 
             }

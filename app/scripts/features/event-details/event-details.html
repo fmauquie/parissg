@@ -1,0 +1,24 @@
+<div class="event-details" ng-controller="app.features.event.details.controller">
+    <div class="event-details-header">
+        <ul>
+            <li>
+                <i class="fa fa-users">{{event.users}}</i>
+            </li>
+            <li>
+                {{event.occurences[0].jour | date}}
+            </li>
+            <li>
+                <i class="fa fa-clock-o"></i>In: {{event.remainingTime}}
+            </li>
+        </ul>
+    </div>
+    <h4>{{event.nom}}</h4>
+    <p>
+        {{event.small_description}}
+    </p>
+    <div class="event-details-footer">
+        <button class="btn btn-primary" ng-click="subscribe()">
+
+        </button>
+    </div>
+</div>
