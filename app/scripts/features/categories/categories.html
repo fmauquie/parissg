@@ -1,0 +1,8 @@
+<div ng-controller="app.features.categories">
+    <h1>Categories</h1>
+    <!--<ez-loading-indicator when="!categories.$resolved" message="Loading categories..."></ez-loading-indicator>-->
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="category in categories" ng-bind="category">
+        </li>
+    </ul>
+</div>
