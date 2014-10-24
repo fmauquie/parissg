@@ -6,6 +6,7 @@
  */
 define([ //
     './exampleService', //
+    './meteoService', //
     './authenticationBackend' //
     // Require your files here
 ], function () {
