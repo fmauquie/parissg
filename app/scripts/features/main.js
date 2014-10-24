@@ -16,7 +16,8 @@
  * on app startup (if you use ezweb.start()). Make sure you name your modules 'app.features.*'.
  */
 define([ //
-    './home/home' //
+    './home/home', //
+    './event/event' //
     // Require your files here
 ], function (angular) {
     // Using EZWeb module auto-loading
