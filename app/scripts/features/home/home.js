@@ -55,18 +55,18 @@ define([ //
                     $scope.hello = result.data.example;
                 });
 */
-                var queryParmas = {
+                /*var queryParmas = {
                      date : '12345677',
-                     category : 'monument',
+                     category : 'concert',
                      geo: 'geo',
                      offset : 'offset',
                      limit : 'limit'
                  }
 
                 activitiesService.get(queryParmas).then(function(response){
-                    console.log("monument!")
+                    console.log("concert!")
                     console.dir(response);
-                });
+                });*/
 
                 // restangular HOWO TO here > http://stackoverflow.com/a/22496253
             }
