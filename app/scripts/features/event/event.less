@@ -50,7 +50,8 @@
 
 .event-item {
 
-  text-shadow: 1px 1px 0x #000;
+  font-size: 11px;
+  border-radius: 3px;
 
   background: #420001; /* Old browsers */
   background: -moz-linear-gradient(top, #420001 42%, #b00004 100%); /* FF3.6+ */
@@ -60,6 +61,10 @@
   background: -ms-linear-gradient(top, #420001 42%, #b00004 100%); /* IE10+ */
   background: linear-gradient(to bottom, #420001 42%, #b00004 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#420001', endColorstr='#b00004', GradientType=0); /* IE6-9 */
+
+  .event-item-header {
+    padding: 10px;
+  }
 
   .event-item-header ul {
     margin: 0;
@@ -71,12 +76,18 @@
     display: inline-block;
     list-style: none outside none;
     margin-right: 20px;
+    font-size: 13px;
+    text-shadow: 1px 1px 0x #000;
   }
 
   .event-item-picture {
+    background-image: url("villette.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 60px;
     align-content: center;
     min-height: 2em;
-    border: 1px #808080 dashed;
+
   }
 }
 
