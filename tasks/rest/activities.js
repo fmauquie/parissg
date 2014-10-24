@@ -2,7 +2,7 @@
 var restSupport = require('connect-rest');
 
 restSupport.get({
-    path: '/api/activities/date/:when/category/:category/geo/:geo/offset/:offset/limit/:limit'
+    path: '/api/activities/date/:when/category/all/geo/:geo/offset/:offset/limit/:limit'
 }, function (req, content, next) {
     next(null,
         [
@@ -746,7 +746,7 @@ restSupport.get({
                     "geolocation": "48.8572611183535,2.334423065185547",
                     "distance": 414.778,
                     "hasFee": null,
-                    "categories": ["Musuem"],
+                    "categories": ["Museum"],
                     "files": [],
                     "occurences": []
                 },
@@ -761,7 +761,7 @@ restSupport.get({
                     "geolocation": "48.8572611183535,2.334423065185547",
                     "distance": 437.766,
                     "hasFee": null,
-                    "categories": ["Musuem"],
+                    "categories": ["Museum"],
                     "files": [],
                     "occurences": []
                 },
@@ -776,7 +776,7 @@ restSupport.get({
                     "geolocation": "48.8572611183535,2.334423065185547",
                     "distance": 481.309,
                     "hasFee": null,
-                    "categories": ["Musuem"],
+                    "categories": ["Museum"],
                     "files": [],
                     "occurences": []
                 },

@@ -51,18 +51,22 @@ define([ //
             'activities', //
             function ($scope, exampleService, activitiesService) {
 
-//                 var queryParmas = {
-//                     date : '12345677',
-//                     category : '14',
-//                     geo: 'geo',
-//                     offset : 'offset',
-//                     limit : 'limit'
-//                 }
-//
-//                activitiesService.get(queryParmas).then(function(response){
-//                    console.dir(response);
-//                });
+                exampleService.get().then(function(result){
+                    $scope.hello = result.data.example;
+                });
 
+                /* var queryParmas = {
+                     date : '12345677',
+                     category : 'museum',
+                     geo: 'geo',
+                     offset : 'offset',
+                     limit : 'limit'
+                 }
+
+                activitiesService.get(queryParmas).then(function(response){
+                    console.log("museum!")
+                    console.dir(response);
+                });*/
 
                 // restangular HOWO TO here > http://stackoverflow.com/a/22496253
             }
