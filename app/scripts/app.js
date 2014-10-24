@@ -7,6 +7,7 @@ define([ //
     'ngRoute', //
     'underscore', //
     'Restangular', //
+    'ngTouch', //
     'bootstrap', //
     'ezweb/main', // Split this up if you don't need the whole ez-web
     'filters', //

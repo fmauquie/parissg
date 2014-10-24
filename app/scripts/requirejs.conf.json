@@ -1,13 +1,15 @@
 {
     "paths": {
         "underscore" : "../vendor/underscore/underscore-min",
-        "Restangular" : "../vendor/restangular/restangular"
+        "Restangular" : "../vendor/restangular/restangular",
+        "ngTouch": "../vendor/angular-touch/angular-touch"
     },
     "shim": {
         "underscore" : {
             "exports": "_"
         },
-        "Restangular" : ["underscore", "angular"]
+        "Restangular" : ["underscore", "angular"],
+        "ngTouch": ["angular"]
     },
     "stubLess": false
 }

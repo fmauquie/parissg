@@ -1,0 +1,26 @@
+<div class="event-item">
+    <div class="event-item-header">
+        <ul>
+            <li>
+                <h4>{{model.nom}}</h4>
+            </li>
+            <li>
+                {{model.occurences[0].jour | date}}
+            </li>
+            <li>
+                <i class="fa fa-clock-o"></i>In: {{model.remainingTime}}
+            </li>
+        </ul>
+    </div>
+    <div class="event-item-picture">
+
+    </div>
+    <p>
+        {{model.small_description}}
+    </p>
+    <p>
+        <strong>Where?</strong> {{model.lieu}}
+    </p>
+    <div class="event-item-footer">
+    </div>
+</div>

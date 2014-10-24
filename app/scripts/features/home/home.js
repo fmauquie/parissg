@@ -17,7 +17,6 @@ define([ //
     var featureName = 'home';
 
     return angular.module('app.features.home', [ // List the dependencies specific to this feature
-            'app.services.example', // Remove me, this is for the example
             'app.services.activities'
         ]) //
         // Configure the routes to the feature here. Each feature takes care of its own routes.
@@ -49,29 +48,28 @@ define([ //
         // We define our controller
         .controller('app.features.home.controller', [ //
             '$scope', //
-            'app.services.example', //
             'activities', //
-            function ($scope, exampleService, activitiesService) {
+            function ($scope, activitiesService) {
 
-                exampleService.get().then(function(result){
+                /*exampleService.get().then(function(result){
                     $scope.hello = result.data.example;
                 });
+*/
+                var queryParmas = {
+                     date : '12345677',
+                     category : 'monument',
+                     geo: 'geo',
+                     offset : 'offset',
+                     limit : 'limit'
+                 }
 
-//                 var queryParmas = {
-//                     date : '12345677',
-//                     category : '14',
-//                     geo: 'geo',
-//                     offset : 'offset',
-//                     limit : 'limit'
-//                 }
-//
-//                activitiesService.get(queryParmas).then(function(response){
-//                    console.dir(response);
-//                });
-
+                activitiesService.get(queryParmas).then(function(response){
+                    console.log("monument!")
+                    console.dir(response);
+                });
 
                 // restangular HOWO TO here > http://stackoverflow.com/a/22496253
             }
-        ]) //
+        ])
         ;
 });
