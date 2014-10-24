@@ -62,7 +62,8 @@ define([
         .directive('eventItem', [ //
             '$timeout', //
             '$location', //
-            function ($timeout, $location) {
+            '$sce', //
+            function ($timeout, $location, $sce) {
                 return {
                     restrict: 'A',
                     template: itemTemplate,
@@ -70,9 +71,10 @@ define([
                         model: '='
                     },
                     link: function ($scope) {
-                        var test = $scope;
 
-
+                        $scope.getDescription = function(){
+                            return $scope.model ? $sce.trustAsHtml($scope.model.small_description) : '';
+                        };
 
                     }
                 }

@@ -63,7 +63,7 @@ define([ //
                     },
                     {
                         id: 'film',
-                        name: 'Films'
+                        name: 'Movies'
                     },
                     {
                         id: 'concert',
