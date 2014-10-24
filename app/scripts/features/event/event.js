@@ -42,7 +42,12 @@ define([ //
         .controller('app.features.event.controller', [ //
             '$scope', //
             function ($scope) {
+                //STUB
+                var events = [];
 
+                function Event(name){
+                    this.name = name;
+                }
             }
         ]) //
         ;
