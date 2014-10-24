@@ -28,6 +28,29 @@ define([
                         'Show',
                         'Street - Art'
                     ];
+                    $scope.categories = [
+                        {
+                            id: 'concert',
+                            name: 'Concerts'
+                        },
+                        {
+                            id: 'film',
+                            name: 'Films'
+                        },
+                        {
+                            id: 'concert',
+                            name: 'Monuments'
+
+                        },
+                        {
+                            id: 'concert',
+                            name: 'Museums'
+                        },
+                        {
+                            id: 'concert',
+                            name: 'Sports'
+                        }
+                    ]
                 }, 100);
 
                 $scope.removeCategories = function () {

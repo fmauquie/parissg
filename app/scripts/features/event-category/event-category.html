@@ -1,0 +1,9 @@
+<div class="event-category-container" ng-controller="app.features.event.category.controller">
+    <div class="event-category-title">
+        <h4>{{category.name}} events</h4>
+    </div>
+    <div class="list-group">
+        <a class="list-group-item" ng-repeat="event in events" ng-bind-html="event.name" ng-href="#/events/event/{{ event.id }}">
+        </a>
+    </div>
+</div>

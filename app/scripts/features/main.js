@@ -18,6 +18,7 @@
 define([ //
     './home/home', //
     './event/event', //
+    './event-category/event-category', //
     './categories/categories', //
     './event-details/event-details' //
     // Require your files here
