@@ -23,7 +23,16 @@ define([ //
                     size: {
                         height: 100
                     }
-                }
+                };
+            }
+        ]) //
+        .controller('app.layouts.main.meteo', [
+            '$scope',
+            'meteo',
+            function ($scope, meteo) {
+                meteo.get.then(function (previsions) {
+                    $scope.meteo = previsions[0];
+                });
             }
         ]) //
         ;
