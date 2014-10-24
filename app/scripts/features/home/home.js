@@ -53,6 +53,9 @@ define([ //
                 exampleService.get().then(function(result){
                     $scope.hello = result.data.example;
                 });
+
+
+                // restangular HOWO TO here > http://stackoverflow.com/a/22496253
             }
         ]) //
         ;
