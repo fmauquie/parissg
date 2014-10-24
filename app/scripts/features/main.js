@@ -17,7 +17,8 @@
  */
 define([ //
     './home/home', //
-    './event/event' //
+    './event/event', //
+    './categories/categories' //
     // Require your files here
 ], function (angular) {
     // Using EZWeb module auto-loading
