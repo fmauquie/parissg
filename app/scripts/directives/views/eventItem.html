@@ -15,6 +15,9 @@
 
     <div class="event-item-picture col-xs-12"></div>
     <p ng-bind-html="model.small_description"></p>
+    <div style="width: 100%;">
+        <img ng-repeat="file in model.files" src="{{file.path}}" style="width: 100%" />
+    </div>
     <p>
         <strong>Where?</strong> {{model.lieu}}
     </p>
