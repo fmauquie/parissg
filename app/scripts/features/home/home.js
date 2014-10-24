@@ -28,9 +28,6 @@ define([ //
             '$routeProvider', //
             function ($routeProvider) {
                 $routeProvider
-                    .when('/', {
-                        template: homeTemplate
-                    })
                     .otherwise({
                         redirectTo: '/'
                     });

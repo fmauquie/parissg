@@ -9,7 +9,7 @@ define([
         .config([ //
             '$routeProvider',
             function ($routeProvider) {
-                $routeProvider.when('/categories', {
+                $routeProvider.when('/', {
                     template: categoriesTemplate
                 });
             }

@@ -21,10 +21,7 @@ define([
                 this.current = function () {
                     var deferred = $q.defer();
 
-                    deferred.resolve({
-                        username: 'John Doe',
-                        roles: []
-                    });
+                    deferred.reject('Not logged in');
 
                     return deferred.promise;
                 };
