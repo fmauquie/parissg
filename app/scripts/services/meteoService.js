@@ -7,9 +7,8 @@ define([ //
             'Restangular', //
             function (restangular) {
                 return {
-                    getList: restangular.all('api/meteo').getList()
+                    get: restangular.all('api/meteo').getList()
                 };
             }
-        ]) //
-        ;
+        ]);
 });

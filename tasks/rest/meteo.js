@@ -5,8 +5,8 @@ restSupport.get({
     path: '/api/meteo'
 }, function (req, content, next) {
     // http://api.openweathermap.org/data/2.5/weather?q=Paris,fr&units=metric
-    next(null, {
+    next(null, [{
         "status": "scattered clouds",
         "temp": 14.2,
-    });
+    }]);
 });
