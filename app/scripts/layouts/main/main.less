@@ -10,6 +10,17 @@ a {
 }
 
 .main-layout {
+  -webkit-transform: scale(1.5, 1.5);
+  transform: scale(1.5, 1.5);
+
+  -webkit-transition: transform 1s;
+  transition: transform 1s;
+
+  &.started {
+    -webkit-transform: none;
+    transform: none;
+  }
+
   .bottom-bar {
     .col-xs-4 {
       padding: 0;
@@ -116,4 +127,12 @@ a {
     width: 24px;
     height: 24px;
   }
+}
+
+.welcome {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }

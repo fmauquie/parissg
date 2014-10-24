@@ -1,60 +1,41 @@
 .part1 {
-  position: fixed;
+  position: absolute;
   top: 0px;
   left: 0px;
-  float: left;
-  width: 320px;
-  height: 480px;
+  right: 0;
+  bottom: 0;
   background-image: url("welcome_total_part_1.png");
   z-index: 1;
+  -webkit-transition: 1s all;
+  transition: 1s all;
 
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  &.ng-hide {
+    left: -321px;
+    right: 321px;
+  }
+  &.ng-hide.ng-animate {
+    display: block!important;
+  }
 }
 
-.part1-end-animate {
-  left: -320px !important;
-
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-}
-
-.part2-end-animate {
-  left: 640px !important;
-
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-}
 
 .part2 {
-  position: fixed;
+  position: absolute;
   top: 0px;
   left: 0px;
-  width: 320px;
-  height: 480px;
+  right: 0;
+  bottom: 0;
   background-image: url("welcome_total_part_2.png");
   z-index: 2;
 
+  -webkit-transition: 1s all;
+  transition: 1s all;
 
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  &.ng-hide {
+    left: 321px;
+    right: -321px;
+  }
+  &.ng-hide.ng-animate {
+    display: block !important;
+  }
 }
-
-.btnStart {
-  position: fixed;
-  text-align: center;
-  z-index: 3;
-  text-transform: uppercase;
-}
-
-
-
-

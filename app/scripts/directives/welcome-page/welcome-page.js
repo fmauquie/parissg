@@ -6,24 +6,23 @@ define([
     'less!./welcome-page' //
 ], function (angular, template) {
     return angular.module('app.drectives.welcome-page', []) //
-        .directive('welcomePage', [function () {
-            return {
-                restrict: 'AEC',
-                template: template,
-                scope: {
+        .directive('welcomePage', [
+            '$timeout', //
+            'ezweb.auth.services.users',
+            function ($timeout, usersService) {
+                return {
+                    template: template,
+                    link: function ($scope, $element, $attrs) {
+                        $scope.control = {starting: false};
 
-                },
-                controller: function($scope, $element){
-                    $scope.part1Class = "part1";
-                    $scope.part2Class= "part2";
-
-                    $scope.onClick = function() {
-                        $scope.part1Class = "part1-end-animate";
-                        $scope.part2Class = "part2-end-animate";
-
-
+                        $scope.start = function () {
+                            usersService.login('a', 'b');
+                        };
+                        if ($attrs.welcomePage === 'true') {
+                            $scope.control.starting = true;
+                        }
                     }
-                },
+                }
             }
-        }])
+        ])
 });

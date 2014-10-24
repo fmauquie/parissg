@@ -18,7 +18,11 @@ define([ //
         ]) //
         .controller('app.layouts.main.controller', [
             '$scope',
-            function ($scope) {
+            '$timeout',
+            function ($scope, $timeout) {
+                $timeout(function () {
+                    $scope.started = true;
+                }, 10);
                 $scope.bottomBar = {
                     size: {
                         height: 100

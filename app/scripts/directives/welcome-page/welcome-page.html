@@ -1,6 +1,4 @@
-<div>
-    <div class="part1" ng-class="{{part1Class}}"></div>
-    <div class="part2" ng-class="{{part2Class}}"></div>
-
-    <button class="btnStart" ng-href="onClick()">Start</button>
+<div ng-click="start()">
+    <div ng-hide="control.starting" class="part1"></div>
+    <div ng-hide="control.starting" class="part2"></div>
 </div>

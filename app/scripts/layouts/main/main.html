@@ -1,5 +1,9 @@
 <!-- This line must appear somewhere in your layout -->
-<div class="main-layout container" ng-controller="app.layouts.main.controller" ez-user-require-logged-in>
+<div ez-user-require-logged-in welcome-page="true"></div>
+<div class="main-layout container"
+     ng-controller="app.layouts.main.controller"
+     ez-user-require-logged-in
+     ng-class="{started: started}">
     <ez-app-header>
         <ul ez-login-actions>
             <li>
@@ -59,9 +63,7 @@
         </div>
     </ez-fixed-panel>
 </div>
-<div ez-user-require-logged-out>
-    <div ez-center-in-window>
-        <!--<div ez-login-page></div>-->
-        <div welcome-page></div>
-    </div>
+<div ez-user-require-logged-out class="welcome">
+    <!--<div ez-login-page></div>-->
+    <div welcome-page></div>
 </div>
