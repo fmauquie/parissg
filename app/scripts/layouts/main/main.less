@@ -13,12 +13,36 @@ a {
   .bottom-bar {
     .col-xs-4 {
       padding: 0;
+      position: relative;
+    }
+    .link-container {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
     }
 
     .bottom-side {
       height: 100%;
       border-top: 1px red solid;
       margin-top: 50px;
+      .link-container {
+        top: 50px;
+      }
+
+      &.left {
+        padding-left: 15px;
+        .link-container {
+          left: 15px;
+        }
+      }
+      &.right {
+        padding-right: 15px;
+        .link-container {
+          right: 15px;
+        }
+      }
+
     }
 
     .bottom-center {
@@ -28,10 +52,30 @@ a {
       border-right: 1px red solid;
       border-top-left-radius: 50px;
       border-top-right-radius: 50px;
+      .link-container {
+        top: 10px;
+      }
     }
 
     .row, .row > div {
       height: 100%;
+    }
+
+    .nav {
+      display: block;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      position: relative;
+
+      .horizontal-center {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+      }
     }
   }
 }
