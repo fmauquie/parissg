@@ -1,0 +1,16 @@
+<div class="ez-modal modal fade"
+     role="dialog"
+     aria-labelledby="{{ezTitle}}"
+     aria-hidden="true">
+    <div class="modal-dialog" ng-class="{'modal-sm': size === 'sm', 'modal-lg': size === 'lg'}">
+        <div class="modal-content">
+            <div class="modal-header" ng-if="ezClose || ezTitle">
+                <button ng-if="ezClose" type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">&times;</button>
+                <h4 class="modal-title" ng-if="ezTitle">{{ezTitle}}</h4>
+            </div>
+            <div class="modal-body" ng-transclude></div>
+            <div class="modal-footer" ng-show="footer"></div>
+        </div>
+    </div>
+</div>

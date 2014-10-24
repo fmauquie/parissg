@@ -1,0 +1,1 @@
+define(["angular","./directives/modal"],function(a){"use strict";return a.module("ezweb.modal",["ezweb.modal.directives"])});

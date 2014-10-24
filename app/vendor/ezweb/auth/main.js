@@ -1,0 +1,1 @@
+!function(){"use strict";define(["angular","./services/usersServices","./directives/usersDirectives","../core/main","../form/main","../i18n/main"],function(a){return a.module("ezweb.auth",["ezweb.auth.services","ezweb.auth.directives","ezweb.core","ezweb.form","ezweb.i18n"])})}();

@@ -1,0 +1,1 @@
+define(["require","less-internal"],function(a,b){var c={};return c.pluginBuilder="./less-builder",c.load=function(a,c,d,e){e.stubLess===!0?(console.log("Not loading less file because less is disabled. See app/main.js."),d(a)):b.load.apply(this,arguments)},c});

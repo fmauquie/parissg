@@ -1,0 +1,32 @@
+<div class="{{sides}}"
+     ng-style="fixedStyle({width: size.width || null, height: size.height || null, top: positions().top || null, bottom: positions().bottom || null, left: positions().left || null, right: positions().right || null})"
+     ng-class="{'ez-fixed-panel': fixed, resizeable: resizeable()}">
+
+    <div ng-if="fixed && resizeable() && !stickySides.top && !stickySides.left"
+         class="handle backboth top left"
+         ng-mousedown="resize.nw.start()"></div>
+    <div ng-if="fixed && resizeable() && !stickySides.top"
+         class="handle horizontal top"
+         ng-mousedown="resize.n.start()"></div>
+    <div ng-if="fixed && resizeable() && !stickySides.top && !stickySides.right"
+         class="handle both top right"
+         ng-mousedown="resize.ne.start()"></div>
+    <div ng-if="fixed && resizeable() && !stickySides.left"
+         class="handle vertical left"
+         ng-mousedown="resize.w.start()"></div>
+
+    <div class="contents" ng-transclude></div>
+
+    <div ng-if="fixed && resizeable() && !stickySides.right"
+         class="handle vertical right"
+         ng-mousedown="resize.e.start()"></div>
+    <div ng-if="fixed && resizeable() && !stickySides.bottom && !stickySides.left"
+         class="handle both bottom left"
+         ng-mousedown="resize.sw.start()"></div>
+    <div ng-if="fixed && resizeable() && !stickySides.bottom"
+         class="handle horizontal bottom"
+         ng-mousedown="resize.s.start()"></div>
+    <div ng-if="fixed && resizeable() && !stickySides.bottom && !stickySides.right"
+         class="handle backboth bottom right"
+         ng-mousedown="resize.se.start()"></div>
+</div>

@@ -1,0 +1,42 @@
+{
+    "paths": {
+        "jquery": "../vendor/jquery/dist/jquery",
+        "angular": "../vendor/ezweb/ez-angular",
+        "angular-internal": "../vendor/angular/angular",
+        "ngRoute": "../vendor/angular-route/angular-route",
+        "ngResource": "../vendor/angular-resource/angular-resource",
+        "ngAnimate": "../vendor/angular-animate/angular-animate",
+        "bootstrap": "../vendor/bootstrap/dist/js/bootstrap",
+        "ezweb": "../vendor/ezweb",
+        "domReady": "../vendor/domReady/domReady",
+        "less-internal": "../vendor/require-less/less",
+        "less": "../vendor/ezweb/stub/less",
+        "lessc": "../vendor/require-less/lessc",
+        "normalize": "../vendor/require-less/normalize",
+        "text": "../vendor/requirejs-text/text",
+        "ez-i18n": "../vendor/ezweb/i18n/ez-i18n"
+    },
+    "shim": {
+        "ngRoute": ["angular"],
+        "ngResource": ["angular"],
+        "ngAnimate": ["angular"],
+        "angular": {
+            "deps": ["angular-internal"],
+            "exports": "angular"
+        },
+        "angular-internal": {
+            "deps": ["jquery"],
+            "exports": "angular"
+        },
+        "bootstrap": {
+            "deps": ["jquery", "less"]
+        }
+    },
+    "less": {
+        "relativeUrls": true
+    },
+    "waitSeconds": 20,
+    "stubLess": false,
+    "packages": ["services", "filters", "directives", "features", "layouts"],
+    "deps": ["app"]
+}

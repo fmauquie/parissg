@@ -1,0 +1,1 @@
+define(["angular"],function(a){"use strict";return a.module("ezweb.core.filters.responsive",[]).filter("ezBreakpoint",["ezweb.core.services.responsive",function(b){return function(c){return a.isArray(c)?c.indexOf(b.breakpoint)>=0:c===b.breakpoint}}]).filter("ezIfBreakpoint",["ezBreakpointFilter",function(a){return function(b,c,d){return a(c)?b:d}}])});

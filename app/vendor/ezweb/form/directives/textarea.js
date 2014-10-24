@@ -1,0 +1,1 @@
+"use strict";define(["angular","./formDirective"],function(a,b){return a.module("ezweb.form.directives.textarea",[]).directive("ezFormTextarea",[function(){var a=new b({_buildBaseFormElement:function(){return"<textarea ez-control-element "+this._buildAttributesFormElement()+'></textarea><div class="ez-typeahead-placeholder ez-typeahead-overlay"></div>'}});return a}])});

@@ -1,0 +1,1 @@
+"use strict";define(["angular","../auth/main","./directives/header"],function(a){return a.module("ezweb.header",["ezweb.header.directives"])});

@@ -1,0 +1,1 @@
+"use strict";define(["angular","../themes"],function(a){return a.module("ezweb.themes.sg",["ezweb.themes"]).config(["ezweb.themes.serviceProvider","ezweb.core.services.paths.requireProvider",function(a,b){a.register("sg",{triggerClass:"sg",css:b.url("ezweb","themes/sg/sg.css")})}])});

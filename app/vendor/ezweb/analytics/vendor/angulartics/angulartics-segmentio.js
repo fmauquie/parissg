@@ -1,0 +1,1 @@
+!function(a){"use strict";a.module("angulartics.segment.io",["angulartics"]).config(["$analyticsProvider",function(a){a.registerPageTrack(function(a){try{analytics.page(a)}catch(b){if(!(b instanceof ReferenceError))throw b}}),a.registerEventTrack(function(a,b){try{analytics.track(a,b)}catch(c){if(!(c instanceof ReferenceError))throw c}})}])}(angular);

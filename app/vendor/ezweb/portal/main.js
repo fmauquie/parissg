@@ -1,0 +1,1 @@
+"use strict";define(["angular","./directives/portal","less!./styles/portal"],function(a){return a.module("ezweb.portal",["ezweb.portal.directives"])});

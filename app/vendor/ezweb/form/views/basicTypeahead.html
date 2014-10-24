@@ -1,0 +1,10 @@
+<ez-typeahead ez-items="items">
+    <div class="list-group">
+        <a ng-repeat="item in items"
+           class="list-group-item"
+           ez-typeahead-item
+           ng-click="setModelValue(extractItemValue(item))">
+            {{extractItemValue(item)}}</a>
+        </a>
+    </div>
+</ez-typeahead>

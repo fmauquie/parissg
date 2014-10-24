@@ -1,0 +1,64 @@
+<header>
+    <div class="row headerbar hidden-xs">
+        <div class="col-xs-12">
+            <div class="pull-right">
+                <ul class="loginActions"></ul>
+                <ul ez-user-require-logged-in>
+                    <li class="loggedInUser"><a ng-href="#{{userProfile}}">{{$parent.ezweb.user.username}}</a></li>
+                    <li class="logOutLink" title="Logout"><a ng-click="logout()"><i class="fa fa-power-off"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row app-icons hidden-xs">
+        <div class="col-xs-12">
+            <a ng-href="#" class="sg-logo"></a>
+            <a ng-href="#" class="app-logo"></a>
+
+            <div class="version label label-warning" ng-if="version">{{version}}</div>
+        </div>
+    </div>
+    <nav class="row navbar navbar-default"
+         role="navigation"
+         ng-class="{'visible-xs': hasNoNavbarItem, 'navbar-inverse': isNavbarInversed()}">
+        <div class="navbar-header">
+            <div id="mobile-title" class="visible-xs">
+                <a class="sg-logo" ng-href="#"></a>
+
+                <div class="version label label-warning" ng-if="version">{{version}}</div>
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#ez-app-menu-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="label notifications label-danger">{{$parent.ezweb.notifications.unread()}}</span>
+                </button>
+
+                <div class="placeholder">
+                    <div class="mobile-title"></div>
+                    <div style="position:relative; z-index: 0;" class="icons-placeholder"
+                         ng-show="showMobileIconsPlaceholder"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="collapse navbar-collapse" id="ez-app-menu-collapse">
+            <div class="menuEntries"></div>
+            <div class="visible-xs">
+                <ul class="nav navbar-nav loginActions"></ul>
+                <ul class="nav navbar-nav" ez-user-require-logged-in>
+                    <li class="loggedInUser">
+                        <a ng-href="#{{userProfile}}" ng-click="userProfileClick()">{{$parent.ezweb.user.username}}</a>
+                    </li>
+                    <li class="logOutLink"><a ng-click="logout()"><i class="fa fa-power-off"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="hidden" ng-transclude>
+        <!-- This is where we put the given config in order to move it around -->
+    </div>
+</header>

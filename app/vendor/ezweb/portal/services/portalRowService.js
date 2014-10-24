@@ -1,0 +1,1 @@
+define(["angular"],function(a){"use strict";return a.module("ezweb.portal.services.row",[]).service("ezweb.portal.services.row",function(){function a(a,b){this.cubes=a?a:[],this.startIndex=b}return{getRows:function(b,c){var d=[];0>=c&&(c=1);for(var e=0;e<b.length;e+=c)d.push(new a(b.slice(e,e+c),e));return d}}})});

@@ -1,0 +1,1 @@
+!function(a){"use strict";a.module("angulartics.kissmetrics",["angulartics"]).config(["$analyticsProvider",function(a){window._kmq=_kmq||[],a.registerPageTrack(function(a){window._kmq.push(["record","Pageview",{Page:a}])}),a.registerEventTrack(function(a,b){window._kmq.push(["record",a,b])})}])}(angular);

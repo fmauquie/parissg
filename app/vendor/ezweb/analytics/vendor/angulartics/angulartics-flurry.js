@@ -1,0 +1,1 @@
+!function(a){"use strict";a.module("angulartics.flurry",["angulartics"]).config(["$analyticsProvider",function(a){a.registerPageTrack(function(){}),a.registerEventTrack(function(a,b){FlurryAgent.logEvent(a,b)})}])}(angular);

@@ -1,0 +1,5 @@
+<div class="ez-portal-cube ez-portal-cube-empty"
+     ng-show="model.empty"
+     ng-click="createElement()"></div>
+<div class="ez-portal-cube ez-portal-cube-loading" ng-show="!model.empty && !model.$resolved"></div>
+<div class="ez-portal-cube ez-portal-cube-resolved" ng-show="!model.empty && model.$resolved"></div>

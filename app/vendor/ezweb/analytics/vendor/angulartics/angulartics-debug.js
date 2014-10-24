@@ -1,0 +1,1 @@
+!function(a){"use strict";a.module("angulartics.debug",["angulartics"]).config(["$analyticsProvider",function(a){a.registerPageTrack(function(a){console.log("Page tracking: ",a)}),a.registerEventTrack(function(a,b){console.log("Event tracking: ",a,b)})}])}(angular);

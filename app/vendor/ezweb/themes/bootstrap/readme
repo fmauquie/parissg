@@ -1,0 +1,1 @@
+To compile the SGBootstrap theme from the less files, use 'grunt less:bootstrap' from the root path of the showcase.

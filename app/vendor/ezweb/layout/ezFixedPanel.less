@@ -1,0 +1,74 @@
+ez-fixed-panel, \:ez-fixed-panel {
+  display: block;
+}
+
+.ez-fixed-panel {
+  position: fixed;
+  display: block;
+
+  &.resizeable {
+    margin: 6px;
+  }
+
+  &.top {
+    top: 0;
+    margin-top: 0;
+  }
+  &.bottom {
+    bottom: 0;
+    margin-bottom: 0;
+  }
+  &.left {
+    left: 0;
+    margin-left: 0;
+  }
+  &.right {
+    right: 0;
+    margin-right: 0;
+  }
+
+  .handle {
+    position: absolute;
+    display: block;
+
+    &.horizontal {
+      height: 6px;
+      cursor: n-resize;
+      width: 100%;
+    }
+    &.vertical {
+      width: 6px;
+      cursor: e-resize;
+      height: 100%;
+      top: 6px;
+    }
+    &.both {
+      height: 6px;
+      width: 6px;
+      cursor: sw-resize;
+    }
+    &.backboth {
+      // "back"both because cursor is in the position of a backslash
+      height: 6px;
+      width: 6px;
+      cursor: nw-resize;
+    }
+    &.top {
+      top: -6px;
+    }
+    &.bottom {
+      bottom: -6px;
+    }
+    &.left {
+      left: -6px;
+    }
+    &.right {
+      right: -6px;
+    }
+  }
+
+  .contents {
+    height: 100%;
+    width: 100%;
+  }
+}

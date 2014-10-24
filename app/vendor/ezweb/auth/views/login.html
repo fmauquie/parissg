@@ -1,0 +1,25 @@
+<form name="loginForm" class="form-horizontal" role="form" novalidate>
+    <div class="alert alert-danger" ng-class="{hidden: !error}">
+        {{error}}
+    </div>
+    <ez-form-text ez-type="{{usernameIsEmail() ? 'email' : 'text'}}"
+                  ez-label="{{(usernameIsEmail() ? 'ezweb.auth:login.email' : 'ezweb.auth:login.username') | i18next}}"
+                  ng-model="info.username"
+                  ng-required="true"
+                  ez-focus
+                  ez-autocomplete>
+        <ez-error key="email">{{'ezweb.auth:errors.email' | i18next}}</ez-error>
+    </ez-form-text>
+    <ez-form-password ez-label="{{'ezweb.auth:login.password' | i18next}}"
+                      ng-model="info.password"
+                      ng-required="true"
+                      ez-autocomplete></ez-form-password>
+    <div ng-show="supportRememberMe">
+        <ez-form-checkbox ez-label="{{'ezweb.auth:login.rememberMe' | i18next}}"
+                          ng-model="info.rememberme"></ez-form-checkbox>
+    </div>
+    <ez-form-group>
+        <button type="submit" ez-submit-button="login()" ng-i18next="ezweb.auth:login.signIn"></button>
+        <span class="sesame-logo" ng-if="sesame()"></span>
+    </ez-form-group>
+</form>

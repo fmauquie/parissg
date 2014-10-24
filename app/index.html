@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>&lt;App title ! Change me !&gt;</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/ico" href="favicon.ico"/>
+
+    <!-- This 404's in dev. Don't remove it, the app.css file is generated during the build. -->
+    <!-- If you're tired of the long loading time of LESS stylesheets,
+    run a `grunt dist` and change the 'less' path in main.js according to the comments. -->
+    <link rel="stylesheet" href="scripts/app.css">
+
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="vendor/ezweb/core/styles/ie8.css">
+    <script src="vendor/es5-shim/es5-shim.js"></script>
+    <script src="vendor/json3/lib/json3.min.js"></script>
+    <script src="vendor/respond/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body ez-responsive ez-theme="sg">
+
+<!-- Insert here anything that isn't part of the layout, e.g. login page, ngCloak behaviors. -->
+
+<!-- Insert the layout ! THis will layout your app and load the view -->
+<div ez-layout></div>
+
+<script data-main="scripts/main" src="vendor/requirejs/require.js"></script>
+</body>
+</html>

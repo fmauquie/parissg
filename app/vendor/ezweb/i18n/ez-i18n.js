@@ -1,0 +1,1 @@
+define(["require"],function(){var a={};return a.pluginBuilder="./ez-i18n-builder",a.load=function(a,b,c,d){if(d.isBuild)throw"Should not be used as part of a build.";c({languageUrl:function(b){return a+"/"+b.toLowerCase()+".json"}})},a});

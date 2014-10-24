@@ -1,0 +1,1 @@
+"use strict";define(["angular","./themes","./bootstrap/bootstrap","./sg/sg"],function(a){return a.module("ezweb.themes.defaults",["ezweb.themes","ezweb.themes.bootstrap","ezweb.themes.sg"])});

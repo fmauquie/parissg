@@ -1,0 +1,1 @@
+!function(a){"use strict";a.module("angulartics.chartbeat",["angulartics"]).config(["$analyticsProvider",function(a){angulartics.waitForVendorApi("pSUPERFLY",500,function(b){a.registerPageTrack(function(a){b.virtualPage(a)})}),a.registerEventTrack(function(){console.warn("Chartbeat doesn't support event tracking -- silently ignored.")})}])}(angular);

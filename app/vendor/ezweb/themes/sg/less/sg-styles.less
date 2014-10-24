@@ -1,0 +1,59 @@
+﻿//Mixins
+//-------------------------------------------------------------
+
+@media (min-width: @grid-float-breakpoint) {
+  //navbar
+  //-------------------------------------------------------------
+  .navbar {
+    border-width: 2px 0;
+    font-family: Helvetica,Arial,Verdana,sans-serif;
+    .navbar-nav > li {
+      //vertical line
+      background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAARCAIAAACToVFFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAA9JREFUGFdjKC4uZqAQAwALYxbqehA2EgAAAABJRU5ErkJggg==) right center no-repeat;
+      &.last-child,
+      &:last-child {
+        background: none;
+      }
+    }
+  }
+
+  // Dropdown menu items
+  .navbar-nav {
+    > .dropdown {
+      margin: -2px;
+      border: 2px transparent solid;
+      &.open {
+        border: 2px @sg-dark-gray-border-color solid;
+        border-bottom: 2px @sg-orange solid;
+        background: none;
+      }
+    }
+    .dropdown-menu {
+      > li > a {
+        color: @navbar-default-link-color;
+        &:hover,
+        &:focus {
+          color: @navbar-default-link-hover-color;
+          background-color: @navbar-default-link-hover-bg;
+        }
+      }
+      > .active > a {
+        &,
+        &:hover,
+        &:focus {
+          color: @navbar-default-link-active-color;
+          background-color: @navbar-default-link-active-bg;
+        }
+      }
+      > .disabled > a {
+        &,
+        &:hover,
+        &:focus {
+          color: @navbar-default-link-disabled-color;
+          background-color: @navbar-default-link-disabled-bg;
+        }
+      }
+    }
+  }
+
+}

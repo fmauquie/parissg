@@ -1,0 +1,1 @@
+!function(a){"use strict";a.module("angulartics.woopra",["angulartics"]).config(["$analyticsProvider",function(a){a.registerPageTrack(function(a){woopra.track("pv",{url:a})}),a.registerEventTrack(function(a,b){woopra.track(a,b)})}])}(angular);

@@ -1,0 +1,13 @@
+<div class="ez-notification">
+    <div ng-repeat="message in messages" >
+        <div class="message alert alert-{{message.type}} alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                &times;
+            </button>
+            <div class="content">
+                <div class="title" ng-if="message.title">{{message.title}}</div>
+                <div class="content">{{message.content}}</div>
+            </div>
+        </div>
+    </div>
+</div>

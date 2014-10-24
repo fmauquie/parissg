@@ -1,0 +1,67 @@
+@portal-columns: 12;
+@screen-sm-min: 768px;
+@screen-md-min: 992px;
+@screen-lg-min: 1200px;
+
+// ------------
+// -- Height --
+// ------------
+
+.calc-grid-column-height(@index, @class, @min-width) when (@index > 0) {
+  &.col-@{class}-@{index} {
+
+    padding: 0;
+
+    .ez-portal-cube {
+      min-height: @min-width * @index / @portal-columns;
+      max-height: @min-width * @index / @portal-columns;
+    }
+
+  }
+}
+
+.loop-grid-columns-height(@index, @class, @min-width) when (@index >= 0) {
+  .calc-grid-column-height(@index, @class, @min-width);
+  // next iteration
+  .loop-grid-columns-height((@index - 1), @class, @min-width);
+}
+
+// Create grid for specific class
+.make-grid-height(@class, @min-width) {
+  .loop-grid-columns-height(@portal-columns, @class, @min-width);
+}
+
+.ez-portal {
+
+  .ez-portal-column {
+
+    // Small grid
+    @media (min-width: @screen-sm-min) {
+      .make-grid-height(sm, @screen-sm-min);
+    }
+
+    // Medium grid
+    @media (min-width: @screen-md-min) {
+      .make-grid-height(md, @screen-md-min);
+    }
+
+    // Large grid
+    @media (min-width: @screen-lg-min) {
+      .make-grid-height(lg, @screen-lg-min);
+    }
+
+    .ez-portal-cube {
+
+      overflow-y: hidden;
+      overflow-x: hidden;
+
+      &.ez-portal-cube-resolved {
+        border: 1px solid darkgray;
+        background-color: #d3d3d3;
+      }
+
+    }
+
+  }
+
+}

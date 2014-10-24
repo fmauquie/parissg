@@ -1,0 +1,12 @@
+<div class="ez-portal">
+    <div class="hidden" ng-transclude></div>
+    <div ng-repeat="row in rows" class="row">
+        <div ng-repeat="cube in row.cubes" ng-class="classes" class="ez-portal-column">
+            <ez-portal-cube model="cube"
+                            item="{{config.item}}"
+                            index="{{row.startIndex + $index}}"
+                            read-only="config.readOnly"></ez-portal-cube>
+        </div>
+    </div>
+</div>
+

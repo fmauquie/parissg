@@ -1,0 +1,1 @@
+"use strict";define(["angular","./directives/grid","./directives/colreorder","./directives/colvis"],function(a){return a.module("ezweb.grid",["ezweb.grid.directives","ezweb.grid.colreorder","ezweb.grid.colvis"])});

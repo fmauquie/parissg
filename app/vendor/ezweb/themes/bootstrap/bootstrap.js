@@ -1,0 +1,1 @@
+"use strict";define(["angular","../themes"],function(a){return a.module("ezweb.themes.bootstrap",["ezweb.themes"]).config(["ezweb.themes.serviceProvider","ezweb.core.services.paths.requireProvider",function(a,b){a.register("bootstrap",{triggerClass:"bootstrap",css:b.url("ezweb","themes/bootstrap/bootstrap.css")})}])});

@@ -1,0 +1,15 @@
+node_modules
+.tmp
+.sass-cache
+*.iml
+.idea/
+_old/
+.project
+.settings
+/dist
+/npm-debug.log
+/.externalToolBuilders
+build/logs/
+.classpath
+/target
+app.zip
