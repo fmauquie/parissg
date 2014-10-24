@@ -65,6 +65,10 @@ define([ //
                     $scope.event = $filter('filter')(response, {id: $routeParams.id})[0];
                 });
 
+                $scope.subscribe = function() {
+
+                };
+
             }
         ]) //
         ;

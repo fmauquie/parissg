@@ -14,7 +14,8 @@
 define([ //
     './href-after', //
     // Require your files here
-    './welcome-page/welcome-page'
+    './welcome-page/welcome-page',
+    './event'
 ], function () {
     // Using EZWeb module auto-loading
 });

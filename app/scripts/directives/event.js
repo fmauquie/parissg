@@ -1,7 +1,7 @@
 define([
     'angular',
-    'text!../views/eventStack.html',
-    'text!../views/eventItem.html'
+    'text!./views/eventStack.html',
+    'text!./views/eventItem.html'
 ], function (angular, stackTemplate, itemTemplate) {
     angular.module('app.features.event.directives', [ //
     ])

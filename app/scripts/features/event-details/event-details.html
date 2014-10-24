@@ -1,21 +1,25 @@
 <div class="event-details" ng-controller="app.features.event.details.controller">
     <div class="event-details-header">
+        <h4>{{event.name}}</h4>
         <ul>
             <li>
                 <i class="fa fa-users">{{event.users}}</i>
             </li>
             <li>
-                {{model.occurrences[0].jour | date}}
+                {{event.occurrences[0].jour | date}}
             </li>
             <li>
                 <i class="fa fa-clock-o"></i>In: 4 days ago
             </li>
         </ul>
     </div>
-    <h4>{{event.name}}</h4>
-    <p ng-bind-html="model.small_description"></p>
+    <p ng-bind-html="event.small_description"></p>
     <div class="event-details-footer">
         <button class="btn btn-primary" ng-click="subscribe()">
+            Subscribe
         </button>
+        <a class="btn btn-link" ng-href="#/events/near">
+            Not interested...
+        </a>
     </div>
 </div>

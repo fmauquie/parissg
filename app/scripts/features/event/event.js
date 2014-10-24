@@ -7,7 +7,6 @@ define([ //
     'angular', // Always include angular !
     'text!./event.html', // Include your template file
     'ez-i18n!./locales', // Include your locales folder
-    './directives/event', //
     'less!./event' // Include feature-specific stylesheets. You can also use css!./<name>, but this is not recommended
     // You can require other stuff in the feature as you need it !
 ], function (angular, eventTemplate, i18n) {
