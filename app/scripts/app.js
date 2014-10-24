@@ -4,11 +4,13 @@ define([ //
     'domReady', //
     'ngResource', //
     'ngAnimate', //
+    'ngSanitize', //
     'ngRoute', //
     'underscore', //
     'Restangular', //
     'ngTouch', //
     'bootstrap', //
+    'angularMoment', //
     'ezweb/main', // Split this up if you don't need the whole ez-web
     'filters', //
     'services', //

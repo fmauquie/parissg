@@ -25,7 +25,7 @@ define([ //
         // "default" feature such as home is a great place to do that.
         .config([ //
             '$routeProvider', //
-            function($routeProvider){
+            function ($routeProvider) {
                 $routeProvider
                     .when('/events/near', {
                         template: eventTemplate
@@ -45,19 +45,28 @@ define([ //
         .controller('app.features.event.controller', [ //
             '$scope', //
             '$routeParams', //
-            'app.services.events', //
-            function ($scope, $routeParams, eventsService) {
+            'activities', //
+            function ($scope, $routeParams, activitiesService) {
 
-                function processEvent(event){
+                function processEvent(event) {
                     // TODO call a service
                     event.users = '3';
-                    event.remainingTime = '3h';
                     return event;
                 }
 
-                var events = eventsService.query(function(events){
-                    $scope.events = events.map(processEvent);
+
+                var queryParmas = {
+                    when: '12345677',
+                    category: 'all',
+                    geo: 'geo',
+                    offset: 'offset',
+                    limit: 'limit'
+                };
+
+                activitiesService.get(queryParmas).then(function (response) {
+                    $scope.events = response;
                 });
+
 
             }
         ]) //
