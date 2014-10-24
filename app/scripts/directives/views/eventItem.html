@@ -18,7 +18,7 @@
         <span ng-bind-html="getDescription()"></span>
     </div>
     <p>
-        <strong>Where?</strong> {{model.lieu}}
+        <strong>Where?</strong> {{model.lieu || model.address}}
     </p>
     <div style="width: 100%;" ng-if="model.files.length > 0">
         <img ng-repeat="file in model.files" src="{{file.path}}" ng-if="file.path != undefined" style="width: 100%" />
