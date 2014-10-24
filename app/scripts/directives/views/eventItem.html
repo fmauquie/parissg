@@ -20,7 +20,7 @@
     <p>
         <strong>Where?</strong> {{model.lieu}}
     </p>
-    <div style="width: 100%;">
+    <div style="width: 100%;" ng-if="model.files.length > 0">
         <img ng-repeat="file in model.files" src="{{file.path}}" style="width: 100%" />
     </div>
 </div>
