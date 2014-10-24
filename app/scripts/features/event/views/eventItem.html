@@ -2,25 +2,23 @@
     <div class="event-item-header">
         <ul>
             <li>
-                <h4>{{model.nom}}</h4>
+                <h4 ng-bind-html="model.name"></h4>
             </li>
             <li>
-                {{model.occurences[0].jour | date}}
+                {{model.occurrences[0].jour | date}}
             </li>
-            <li>
-                <i class="fa fa-clock-o"></i>In: {{model.remainingTime}}
-            </li>
+            <!--<li>-->
+                <!--<i class="fa fa-clock-o"></i>In: <span am-time-ago="model.occurrences[0].jour"></span>-->
+            <!--</li>-->
         </ul>
     </div>
-    <div class="event-item-picture">
 
-    </div>
-    <p>
-        {{model.small_description}}
-    </p>
+    <div class="event-item-picture col-xs-12"></div>
+    <p ng-bind-html="model.small_description"></p>
     <p>
         <strong>Where?</strong> {{model.lieu}}
     </p>
     <div class="event-item-footer">
+        <button ng-click="more()">MORE</button>
     </div>
 </div>

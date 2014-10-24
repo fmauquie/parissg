@@ -44,11 +44,25 @@ define([ //
         .controller('app.features.event.details.controller', [ //
             '$scope', //
             '$routeParams', //
-            'app.services.event', //
-            function ($scope, $routeParams, eventService) {
+            '$filter',
+            'activities', //
+            function ($scope, $routeParams, $filter, activitiesService) {
 
-                eventService.get({id: $routeParams.id}, function(event){
-                    $scope.event = event;
+//                eventService.get({id: $routeParams.id}, function(event){
+//                    $scope.event = event;
+//                });
+
+
+                var queryParmas = {
+                    when: '12345677',
+                    category: 'all',
+                    geo: 'geo',
+                    offset: 'offset',
+                    limit: 'limit'
+                };
+
+                activitiesService.get(queryParmas).then(function (response) {
+                    $scope.event = $filter('filter')(response, {id: $routeParams.id})[0];
                 });
 
             }

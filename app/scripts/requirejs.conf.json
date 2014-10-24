@@ -2,14 +2,18 @@
     "paths": {
         "underscore" : "../vendor/underscore/underscore-min",
         "Restangular" : "../vendor/restangular/restangular",
-        "ngTouch": "../vendor/angular-touch/angular-touch"
+        "ngTouch": "../vendor/angular-touch/angular-touch",
+        "ngSanitize": "../vendor/angular-sanitize/angular-sanitize",
+        "angularMoment": "../vendor/moment/angular-moment"
     },
     "shim": {
         "underscore" : {
             "exports": "_"
         },
         "Restangular" : ["underscore", "angular"],
-        "ngTouch": ["angular"]
+        "ngTouch": ["angular"],
+        "ngSanitize": ["angular"],
+        "angularMoment": ["angular"]
     },
     "stubLess": false
 }
