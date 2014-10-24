@@ -12,6 +12,7 @@
  * on app startup (if you use ezweb.start()). Make sure you name your modules 'app.directives.*'.
  */
 define([ //
+    './href-after' //
     // Require your files here
 ], function () {
     // Using EZWeb module auto-loading
