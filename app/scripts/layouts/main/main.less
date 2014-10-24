@@ -9,6 +9,10 @@ a {
   color: white;
 }
 
+body {
+  background: #750001 !important;
+}
+
 .container {
   overflow-x: hidden;
 }
@@ -126,7 +130,66 @@ a {
 }
 
 .sg .navbar-toggle {
+  color: white !important;
   border: none !important;
+}
+
+.sg .navbar-default .navbar-toggle:hover,
+.sg .navbar-default .navbar-toggle:focus {
+  background-color: transparent !important;
+}
+
+.sg ul {
+  margin: 0px;
+  width: 100%;
+}
+
+
+.menuEntries a {
+  cursor: pointer;
+}
+
+.menuEntries ul {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+.menuEntries ul li {
+  display: inline-block;
+  list-style: none outside none;
+}
+
+.menuEntries ul li a {
+  color: #484848;
+  display: inline-block;
+  padding: 0.25em;
+}
+
+.menuEntries ul li a i.fa-power-off {
+  color: #D9534F !important;
+}
+
+.menuEntries ul li a:hover {
+  color: #CCC;
+}
+
+.menuEntries .dropdown-menu {
+  display: none;
+}
+
+.menuEntries .open > .dropdown-menu {
+  display: block;
+}
+
+.menuEntries .dropdown-menu li {
+  display: list-item;
+  list-style: none outside none;
+}
+
+.menuEntries .dropdown-menu li > a:hover {
+  background: transparent;
+  text-decoration: underline;
 }
 
 .navbar {
