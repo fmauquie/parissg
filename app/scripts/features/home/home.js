@@ -17,7 +17,6 @@ define([ //
     var featureName = 'home';
 
     return angular.module('app.features.home', [ // List the dependencies specific to this feature
-            'app.services.example', // Remove me, this is for the example
             'app.services.activities'
         ]) //
         // Configure the routes to the feature here. Each feature takes care of its own routes.
