@@ -5,6 +5,8 @@ define([ //
     'ngResource', //
     'ngAnimate', //
     'ngRoute', //
+    'underscore', //
+    'Restangular', //
     'bootstrap', //
     'ezweb/main', // Split this up if you don't need the whole ez-web
     'filters', //

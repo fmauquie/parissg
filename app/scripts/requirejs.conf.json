@@ -1,7 +1,13 @@
 {
     "paths": {
+        "underscore" : "../vendor/underscore/underscore-min",
+        "Restangular" : "../vendor/restangular/restangular"
     },
     "shim": {
+        "underscore" : {
+            "exports": "_"
+        },
+        "Restangular" : ["underscore", "angular"]
     },
     "stubLess": false
 }
