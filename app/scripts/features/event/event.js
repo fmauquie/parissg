@@ -7,13 +7,14 @@ define([ //
     'angular', // Always include angular !
     'text!./event.html', // Include your template file
     'ez-i18n!./locales', // Include your locales folder
+    './directives/event', //
     'less!./event' // Include feature-specific stylesheets. You can also use css!./<name>, but this is not recommended
     // You can require other stuff in the feature as you need it !
 ], function (angular, eventTemplate, i18n) {
     'use strict';
 
     // Change your feature name here
-    var featureName = 'event';
+    var featureName = 'events';
 
     return angular.module('app.features.event', [ // List the dependencies specific to this feature
     ]) //
@@ -22,13 +23,15 @@ define([ //
         // Here we break this convention because it's the home page !
         // Note that you should take care of unsupported routes with otherwise method,
         // "default" feature such as home is a great place to do that.
-        .run([ //
-            '$templateCache',
-            function ($templateCache) {
-                $templateCache
-                    .put('app.templates.' + featureName, eventTemplate);
+        .config([ //
+            '$routeProvider', //
+            function($routeProvider){
+                $routeProvider
+                    .when('/events/near', {
+                        template: eventTemplate
+                    })
             }
-        ]) //
+        ])
         // Register the translation namespaces you are going to use, and all the languages that are managed by the
         // dev team. You must always register locale 'en' since this is the default locale.
         .config([ //
@@ -41,13 +44,21 @@ define([ //
         // We define our controller
         .controller('app.features.event.controller', [ //
             '$scope', //
-            function ($scope) {
-                //STUB
-                var events = [];
+            '$routeParams', //
+            'app.services.events', //
+            function ($scope, $routeParams, eventsService) {
 
-                function Event(name){
-                    this.name = name;
+                function processEvent(event){
+                    // TODO call a service
+                    event.users = '3';
+                    event.remainingTime = '3h';
+                    return event;
                 }
+
+                var events = eventsService.query(function(events){
+                    $scope.events = events.map(processEvent);
+                });
+
             }
         ]) //
         ;

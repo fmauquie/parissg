@@ -5,10 +5,11 @@
  * a part of this feature or directive's module.
  */
 define([ //
-    './exampleService', //
     './meteoService', //
     './activitiesService', //
-    './authenticationBackend' //
+    './authenticationBackend', //
+    './eventsServices', //
+    './usersServices'
     // Require your files here
 ], function () {
     // Using EZWeb module auto-loading

@@ -5,20 +5,18 @@
  */
 define([ //
     'angular', // Always include angular !
-    'text!./home.html', // Include your template file
+    'text!./event-details.html', // Include your template file
     'ez-i18n!./locales', // Include your locales folder
-    'less!./home', // Include feature-specific stylesheets. You can also use css!./<name>, but this is not recommended
-    'less!./main' // This is only for the home ! It includes the global stylesheet.
+    'less!./event-details' // Include feature-specific stylesheets. You can also use css!./<name>, but this is not recommended
     // You can require other stuff in the feature as you need it !
-], function (angular, homeTemplate, i18n) {
+], function (angular, eventDetailsTemplate, i18n) {
     'use strict';
 
     // Change your feature name here
-    var featureName = 'home';
+    var featureName = 'eventDetails';
 
-    return angular.module('app.features.home', [ // List the dependencies specific to this feature
-            'app.services.activities'
-        ]) //
+    return angular.module('app.features.event.details', [ // List the dependencies specific to this feature
+    ]) //
         // Configure the routes to the feature here. Each feature takes care of its own routes.
         // By convention, the route should start with your feature name ( /home/...)
         // Here we break this convention because it's the home page !
@@ -26,16 +24,13 @@ define([ //
         // "default" feature such as home is a great place to do that.
         .config([ //
             '$routeProvider', //
-            function ($routeProvider) {
+            function($routeProvider){
                 $routeProvider
-                    .when('/', {
-                        template: homeTemplate
+                    .when('/events/event/:id', {
+                        template: eventDetailsTemplate
                     })
-                    .otherwise({
-                        redirectTo: '/'
-                    });
             }
-        ]) //
+        ])
         // Register the translation namespaces you are going to use, and all the languages that are managed by the
         // dev team. You must always register locale 'en' since this is the default locale.
         .config([ //
@@ -46,26 +41,17 @@ define([ //
             }
         ]) //
         // We define our controller
-        .controller('app.features.home.controller', [ //
+        .controller('app.features.event.details.controller', [ //
             '$scope', //
-            'activities', //
-            function ($scope, exampleService, activitiesService) {
+            '$routeParams', //
+            'app.services.event', //
+            function ($scope, $routeParams, eventService) {
 
-//                 var queryParmas = {
-//                     date : '12345677',
-//                     category : '14',
-//                     geo: 'geo',
-//                     offset : 'offset',
-//                     limit : 'limit'
-//                 }
-//
-//                activitiesService.get(queryParmas).then(function(response){
-//                    console.dir(response);
-//                });
+                eventService.get({id: $routeParams.id}, function(event){
+                    $scope.event = event;
+                });
 
-
-                // restangular HOWO TO here > http://stackoverflow.com/a/22496253
             }
-        ])
+        ]) //
         ;
 });
