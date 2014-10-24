@@ -17,7 +17,8 @@ define([ //
     var featureName = 'home';
 
     return angular.module('app.features.home', [ // List the dependencies specific to this feature
-            'app.services.example' // Remove me, this is for the example
+            'app.services.example', // Remove me, this is for the example
+            'app.services.activities'
         ]) //
         // Configure the routes to the feature here. Each feature takes care of its own routes.
         // By convention, the route should start with your feature name ( /home/...)
@@ -49,10 +50,24 @@ define([ //
         .controller('app.features.home.controller', [ //
             '$scope', //
             'app.services.example', //
-            function ($scope, exampleService) {
+            'activities', //
+            function ($scope, exampleService, activitiesService) {
+
                 exampleService.get().then(function(result){
                     $scope.hello = result.data.example;
                 });
+
+//                 var queryParmas = {
+//                     date : '12345677',
+//                     category : '14',
+//                     geo: 'geo',
+//                     offset : 'offset',
+//                     limit : 'limit'
+//                 }
+//
+//                activitiesService.get(queryParmas).then(function(response){
+//                    console.dir(response);
+//                });
 
 
                 // restangular HOWO TO here > http://stackoverflow.com/a/22496253

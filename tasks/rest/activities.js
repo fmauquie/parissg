@@ -2,12 +2,10 @@
 var restSupport = require('connect-rest');
 
 restSupport.get({
-    path: '/api/activities/:when/:category/:geo/:offset/:limit'
+    path: '/api/activities/date/:when/category/:category/geo/:geo/offset/:offset/limit/:limit'
 }, function (req, content, next) {
     next(null,
-        {
-            "status": "success",
-            "data": [
+        [
                 {
                     "idactivites": 88953,
                     "source": "paris api",
@@ -687,8 +685,6 @@ restSupport.get({
                     "files": [],
                     "occurences": []
                 }
-            ],
-            "message": null
-        }
+            ]
     );
 });
