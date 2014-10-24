@@ -1,7 +1,11 @@
 <div class="event-stack">
+    <!--<div class="left-event-container" ng-click="dislike()">-->
+        <!--Dislike-->
+    <!--</div>-->
+    <!--<div class="right-event-container" ng-click="Like()">-->
+        <!--Like-->
+    <!--</div>-->
     <div ng-repeat="item in data">
-        <div event-item model="item" ng-swipe-left="dislike()" ng-swipe-right="like()" ng-show="item.display">
-
-        </div>
+        <div event-item model="item" ng-swipe-left="like()" ng-swipe-right="dislike()" ng-show="item.display"></div>
     </div>
 </div>

@@ -1,4 +1,8 @@
 
+.events-title {
+  border: 1px #808080 dashed;
+}
+
 .event-item {
 
   .event-item-header ul {
@@ -12,6 +16,28 @@
     list-style: none outside none;
   }
 
+}
+
+.event-stack {
+  position: relative;
+
+  .left-event-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: rotate(90deg);
+    transform-origin: bottom left;
+  }
+
+  .right-event-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+  }
 
 }
 
