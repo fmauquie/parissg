@@ -16,5 +16,15 @@ define([ //
                 layoutProvider.setDefault(layoutName);
             }
         ]) //
+        .controller('app.layouts.main.controller', [
+            '$scope',
+            function ($scope) {
+                $scope.bottomBar = {
+                    size: {
+                        height: 100
+                    }
+                }
+            }
+        ]) //
         ;
 });

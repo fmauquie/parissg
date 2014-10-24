@@ -1,4 +1,30 @@
 <!-- This line must appear somewhere in your layout -->
-<div class="container">
+<div class="main-layout container" ng-controller="app.layouts.main.controller">
+    <ez-app-header>
+
+    </ez-app-header>
     <ng-view></ng-view>
+    <ez-fixed-panel
+            sides="left bottom right"
+            resizeable="false"
+            class="bottom-bar"
+            size="bottomBar.size">
+        <div class="row">
+            <div class="col-xs-4">
+                <div class="bottom-side">
+
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="bottom-center">
+
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="bottom-side">
+
+                </div>
+            </div>
+        </div>
+    </ez-fixed-panel>
 </div>
