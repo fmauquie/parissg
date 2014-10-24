@@ -198,7 +198,7 @@ restSupport.get({
                     "lieu": "Maison des Associations de Solidarit&eacute; (MAS)",
                     "address": "18 rue des Terres au Cur&eacute;",
                     "geolocation": "48.8242434,2.3725332",
-                    "distance": "2.3725332",
+                    "distance": 2.3725332,
                     "hasFee": "1",
                     "categories": ["Concert", "Spectacles"],
                     "files": [
@@ -224,7 +224,7 @@ restSupport.get({
                     "lieu": "Th&eacute;&acirc;tre du gymnase",
                     "address": "38 Boulevard de  Bonne Nouvelle",
                     "geolocation": "48.8708021,2.3488372",
-                    "distance": "5.8",
+                    "distance": 5.8,
                     "hasFee": "1",
                     "categories": ["Concert", "Spectacles"],
                     "files": [
@@ -250,7 +250,7 @@ restSupport.get({
                     "lieu": "Centre musical Fleury Goutte d'Or Barbara",
                     "address": "1 rue Fleury",
                     "geolocation": "48.8842128,2.3540221",
-                    "distance": "12",
+                    "distance": 12,
                     "hasFee": "1",
                     "categories": ["Concert", "Spectacles"],
                     "files": [
@@ -276,7 +276,7 @@ restSupport.get({
                     "lieu": "Ar&egrave;nes de Montmartre",
                     "address": "27 rue Chappe",
                     "geolocation": "48.8857512,2.3420675",
-                    "distance": "1.23",
+                    "distance": 1.23,
                     "hasFee": "0",
                     "categories": ["Concert", "Spectacles"],
                     "files": [
@@ -307,7 +307,7 @@ restSupport.get({
                     "lieu": "Centre d’animation Poterne des Peupliers",
                     "address": "1 rue Gouthière ",
                     "geolocation": "48.820911,2.350803",
-                    "distance": "12.3",
+                    "distance": 12.3,
                     "hasFee": "1",
                     "categories": ["Concert", "Spectacles"],
                     "files": [
@@ -333,7 +333,7 @@ restSupport.get({
                     "lieu": "Eglise Saint-Séverin",
                     "address": "3, rue des Prêtres-Saint-Séverin",
                     "geolocation": "48.8523744,2.345293",
-                    "distance": "6",
+                    "distance": 6,
                     "hasFee": "0",
                     "categories": ["Concert", "Spectacles"],
                     "files": [
@@ -359,7 +359,7 @@ restSupport.get({
                     "lieu": "Eglise Évangélique Allemande",
                     "address": "25, rue Blanche",
                     "geolocation": "48.8794871,2.3313326",
-                    "distance": "20.2",
+                    "distance": 20.2,
                     "hasFee": "1",
                     "categories": ["Concert", "Spectacles"],
                     "files": [
@@ -385,7 +385,7 @@ restSupport.get({
                     "lieu": "Saint Christophe de Javel",
                     "address": "28 rue de la Convention",
                     "geolocation": "48.8448214,2.2795784",
-                    "distance": "5.1",
+                    "distance": 5.1,
                     "hasFee": "1",
                     "categories": [ "Concert", "Spectacles" ],
                     "files": [
@@ -411,7 +411,7 @@ restSupport.get({
                     "lieu": "Sainte Marie des Batignolles",
                     "address": "77 place du Dr F. Lobligeois",
                     "geolocation": "48.886397,2.318056",
-                    "distance": "0.7",
+                    "distance": 0.7,
                     "hasFee": "1",
                     "categories": ["Concert", "Spectacles"],
                     "files": [
@@ -468,7 +468,7 @@ restSupport.get({
                     "lieu": "La Cavatine",
                     "address": "12 rue de L' Abbé-de-L'Epée",
                     "geolocation": "48.8436972,2.3405571",
-                    "distance": "13",
+                    "distance": 13,
                     "hasFee": "1",
                     "categories": ["Concert", "Spectacles"],
                     "files": [
@@ -494,7 +494,7 @@ restSupport.get({
                     "lieu": "Parc Floral",
                     "address": "Avenue des Minimes",
                     "geolocation": "48.8402804,2.43991589999996",
-                    "distance": "33",
+                    "distance": 33,
                     "hasFee": "1",
                     "categories": [ "Concert", "Spectacles"],
                     "files": [
@@ -520,7 +520,7 @@ restSupport.get({
                     "lieu": "Parc Floral",
                     "address": "Avenue des Minimes",
                     "geolocation": "48.8402804,2.43991589999996",
-                    "distance": "1",
+                    "distance": 1,
                     "hasFee": "1",
                     "categories": ["Concert", "Spectacles" ],
                     "files": [
@@ -654,6 +654,36 @@ restSupport.get({
                     "distance": 481.309,
                     "hasFee": null,
                     "categories": ["Musuem"],
+                    "files": [],
+                    "occurences": []
+                },
+                {
+                    "idactivites": 6370,
+                    "source": "paris api",
+                    "name": "Terrain de sport des jardins Saint-Paul",
+                    "description": null,
+                    "small_description": null,
+                    "lieu": null,
+                    "address": "9 rue Charlemagne",
+                    "geolocation": "48.8572611183535,2.334423065185547",
+                    "distance": 712.066,
+                    "hasFee": null,
+                    "categories": ["Sport"],
+                    "files": [],
+                    "occurences": []
+                },
+                {
+                    "idactivites": 6371,
+                    "source": "paris api",
+                    "name": "Terrain de sport Neuve Saint-Pierre",
+                    "description": null,
+                    "small_description": null,
+                    "lieu": null,
+                    "address": "5/7 rue Neuve Saint-Pierre",
+                    "geolocation": "48.8572611183535,2.334423065185547",
+                    "distance": 903.904,
+                    "hasFee": null,
+                    "categories": ["Sport"],
                     "files": [],
                     "occurences": []
                 }
