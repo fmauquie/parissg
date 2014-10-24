@@ -69,3 +69,26 @@
 
 }
 
+.item, .animate-partial {
+  transition: all linear 0.3s;
+}
+
+.item {
+  transform: translateX(0px) rotate(0deg);
+}
+
+.animate-partial.animate-like-partial {
+  transform: translateX(10%) rotate(5deg);
+}
+
+.item.animate-like {
+  transform: translateX(-100%) rotate(-60deg);
+}
+
+.animate-partial.animate-dislike-partial {
+  transform: translateX(-10%) rotate(-5deg);
+}
+
+.item.animate-dislike {
+  transform: translateX(100%) rotate(60deg);
+}
