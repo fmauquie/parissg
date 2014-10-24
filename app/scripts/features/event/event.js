@@ -49,7 +49,9 @@ define([ //
             function ($scope, $routeParams, eventsService) {
 
                 function processEvent(event){
-                    event.testField = 'ploum';
+                    // TODO call a service
+                    event.users = '3';
+                    event.remainingTime = '3h';
                     return event;
                 }
 

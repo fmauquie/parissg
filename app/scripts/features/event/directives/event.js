@@ -8,12 +8,41 @@ define([
             return {
                 restrict: 'A',
                 template: stackTemplate,
-
                 scope: {
                     data: '='
                 },
                 link: function ($scope) {
-                    var test = $scope;
+
+                    var currentIndex = 0;
+
+                    // --
+                    // Display the first event by default when data is loaded
+                    $scope.$watch('data', function(data){
+                        if (angular.isDefined(data) && data.length > 0){
+                            displayEvent(0);
+                        }
+                    });
+
+                    $scope.like = function(){
+                        //TODO displayMoreInfo();
+                    };
+
+                    $scope.dislike = function() {
+                        displayNextEvent(++currentIndex);
+                    };
+
+                    function displayNextEvent(index){
+                        displayEvent(index);
+                    }
+
+                    function displayEvent(index){
+                        angular.forEach($scope.data, function(event){
+                            event.display = false;
+                        });
+                        if (index < $scope.data.length){
+                            $scope.data[index].display = true;
+                        }
+                    }
                 }
             }
         })

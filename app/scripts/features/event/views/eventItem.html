@@ -1,7 +1,19 @@
 <div class="event-item">
+    <div class="event-item-header">
+        <ul>
+            <li>
+                <i class="fa fa-users">{{model.users}}</i>
+            </li>
+            <li>
+                {{model.occurences[0].jour | date}}
+            </li>
+            <li>
+                <i class="fa fa-clock-o"></i>In: {{model.remainingTime}}
+            </li>
+        </ul>
+    </div>
     <h4>{{model.nom}}</h4>
     <p>
         {{model.small_description}}
     </p>
-    <span>Test field: {{model.testField}}</span>
 </div>

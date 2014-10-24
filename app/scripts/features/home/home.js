@@ -48,13 +48,8 @@ define([ //
         // We define our controller
         .controller('app.features.home.controller', [ //
             '$scope', //
-            'app.services.example', //
             'activities', //
             function ($scope, exampleService, activitiesService) {
-
-                exampleService.get().then(function(result){
-                    $scope.hello = result.data.example;
-                });
 
 //                 var queryParmas = {
 //                     date : '12345677',
@@ -71,6 +66,6 @@ define([ //
 
                 // restangular HOWO TO here > http://stackoverflow.com/a/22496253
             }
-        ]) //
+        ])
         ;
 });
