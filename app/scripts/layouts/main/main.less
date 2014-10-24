@@ -6,11 +6,12 @@ a {
 }
 
 * {
-  color: white;
+  color: white !important;
 }
 
 body {
   background: #750001 !important;
+  color: white !important;
 }
 
 .container {
@@ -102,14 +103,13 @@ body {
 #mobile-title .sg-logo {
   background-image: url('../images/logo.png') !important;
   margin: 5px;
-//  background-size: 34px 34px;
-//  background-repeat: no-repeat;
+  //  background-size: 34px 34px;
+  //  background-repeat: no-repeat;
 }
 
-
 .link-container .nav {
-  -webkit-box-shadow: 0px -1px 6px 1px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px -1px 6px 1px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px -1px 6px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px -1px 6px 1px rgba(0, 0, 0, 0.75);
   box-shadow: 0px -1px 6px 1px rgba(0, 0, 0, 0.75);
 
   background: #750001; /* Old browsers */
@@ -129,6 +129,43 @@ body {
 
 }
 
+.sg .navbar-default .navbar-nav > li > a {
+  height: 30px;
+  line-height: 20px;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  margin-left: 10px;
+  border-top: 1px solid #9a0004;
+  color: white !important;
+  vertical-align: middle;
+}
+
+.navbar-collapse {
+  width: 100%;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+.sg .navbar-default .navbar-nav > li > a:hover {
+  height: 30px;
+  line-height: 20px;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  margin-left: 10px !important;
+  border-top: 1px solid #9a0004;
+  color: white !important;
+  vertical-align: middle;
+  background: #410001 !important;
+}
+
+.sg .navbar-default {
+
+  background: #750001 !important;
+  z-index: 3;
+}
+
 .sg .navbar-toggle {
   color: white !important;
   border: none !important;
@@ -143,7 +180,6 @@ body {
   margin: 0px;
   width: 100%;
 }
-
 
 .menuEntries a {
   cursor: pointer;
@@ -195,10 +231,11 @@ body {
 .navbar {
   border: none !important;
 }
+
 .navbar-header {
   border: 0;
-  -webkit-box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.75);
 
   background: #750001; /* Old browsers */
