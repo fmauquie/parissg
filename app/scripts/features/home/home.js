@@ -55,16 +55,16 @@ define([ //
                     $scope.hello = result.data.example;
                 });
 */
-                /*var queryParmas = {
+               /* var queryParmas = {
                      date : '12345677',
-                     category : 'concert',
+                     category : 'film',
                      geo: 'geo',
                      offset : 'offset',
                      limit : 'limit'
                  }
 
                 activitiesService.get(queryParmas).then(function(response){
-                    console.log("concert!")
+                    console.log("film!")
                     console.dir(response);
                 });*/
 
