@@ -24,7 +24,6 @@
     min-height: 2em;
     border: 1px #808080 dashed;
   }
-
 }
 
 .event-stack {
@@ -91,4 +90,16 @@
 
 .item.animate-dislike {
   transform: translateX(100%) rotate(60deg);
+}
+
+.item.ng-hide-remove {
+  -webkit-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+}
+.item {
+  -webkit-transform: none;
+  transform: none;
+
+  -webkit-transition: transform 300ms;
+  transition: transform 300ms;
 }
