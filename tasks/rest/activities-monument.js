@@ -7,7 +7,7 @@ restSupport.get({
     next(null,
         [
             {
-                "idactivites": 3479,
+                "id": 3479,
                 "source": "paris api",
                 "name": "Hôtel de Ville",
                 "description": null,
@@ -22,7 +22,7 @@ restSupport.get({
                 "occurences": []
             },
             {
-                "idactivites": 5045,
+                "id": 5045,
                 "source": "paris api",
                 "name": "Tour Saint Jacques",
                 "description": null,
@@ -37,7 +37,7 @@ restSupport.get({
                 "occurences": []
             },
             {
-                "idactivites": 1202,
+                "id": 1202,
                 "source": "paris api",
                 "name": "Notre-Dame de Paris",
                 "description": null,
@@ -52,7 +52,7 @@ restSupport.get({
                 "occurences": []
             },
             {
-                "idactivites": 61,
+                "id": 61,
                 "source": "paris api",
                 "name": "Centre national d'art et de culture Georges Pompidou",
                 "description": null,
@@ -67,7 +67,7 @@ restSupport.get({
                 "occurences": []
             },
             {
-                "idactivites": 3422,
+                "id": 3422,
                 "source": "paris api",
                 "name": "La Conciergerie",
                 "description": null,

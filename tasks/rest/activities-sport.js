@@ -7,7 +7,7 @@ restSupport.get({
     next(null,
         [
             {
-                "idactivites": 6370,
+                "id": 6370,
                 "source": "paris api",
                 "name": "Terrain de sport des jardins Saint-Paul",
                 "description": null,
@@ -22,7 +22,7 @@ restSupport.get({
                 "occurences": []
             },
             {
-                "idactivites": 6371,
+                "id": 6371,
                 "source": "paris api",
                 "name": "Terrain de sport Neuve Saint-Pierre",
                 "description": null,

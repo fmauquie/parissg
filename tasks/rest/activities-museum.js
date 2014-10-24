@@ -8,7 +8,7 @@ restSupport.get({
         [
 
                 {
-                    "idactivites": 2894,
+                    "id": 2894,
                     "source": "paris api",
                     "name": "Crypte archéologique du parvis de Notre-Dame",
                     "description": null,
@@ -38,7 +38,7 @@ restSupport.get({
                     "occurences": []
                 },
                 {
-                    "idactivites": 3422,
+                    "id": 3422,
                     "source": "paris api",
                     "name": "La Conciergerie",
                     "description": null,
