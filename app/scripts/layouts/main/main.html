@@ -6,10 +6,17 @@
                 <a href="#">My Settings</a>
             </li>
         </ul>
+        <ul ez-navbar-item ez-mobile-title="true" class="nav navbar-nav" ng-controller="app.layouts.main.meteo">
+            <div class="pull-right weather-widget">
+                <img ng-src="{{ 'images/scattered_clouds.png' | ezLayoutPath }}"/>
+                <span>{{ meteo.temp }}°C</span>
+            </div>
+        </ul>
         <ul ez-navbar-item class="nav navbar-nav">
             <li><a href="#">Calendar</a></li>
         </ul>
     </ez-app-header>
+    {{ meteo|json }}
     <ng-view></ng-view>
     <ez-fixed-panel
             sides="left bottom right"
