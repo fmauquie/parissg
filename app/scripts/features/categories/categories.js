@@ -16,14 +16,23 @@ define([
         ]) //
         .controller('app.features.categories', [
             '$scope', //
-            function ($scope) {
-                $scope.categories = [
-                    'Paris Events',
-                    'Paris By Night',
-                    'Theater',
-                    'Show',
-                    'Street - Art'
-                ];
+            '$timeout', //
+            function ($scope, $timeout) {
+                $scope.categories = [];
+
+                $timeout(function () {
+                    $scope.categories = [
+                        'Paris Events',
+                        'Paris Cultural',
+                        'Theater',
+                        'Show',
+                        'Street - Art'
+                    ];
+                }, 100);
+
+                $scope.removeCategories = function () {
+                    $scope.categories = [];
+                };
             }
         ]) //
         ;

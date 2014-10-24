@@ -1,8 +1,8 @@
-<div ng-controller="app.features.categories">
+<div class="categories" ng-controller="app.features.categories">
     <h1>Categories</h1>
     <!--<ez-loading-indicator when="!categories.$resolved" message="Loading categories..."></ez-loading-indicator>-->
     <div class="list-group">
-        <a class="list-group-item" ng-repeat="category in categories" ng-bind="category" ng-href="#/events/category/{{ category }}">
+        <a class="list-group-item animate" ng-repeat="category in categories" ng-bind="category" ng-href="#/events/category/{{ category }}" ez-delay="500" ng-click="removeCategories()">
         </a>
     </div>
 </div>
