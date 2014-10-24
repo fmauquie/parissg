@@ -35,19 +35,19 @@ define([
                         },
                         {
                             id: 'film',
-                            name: 'Films'
+                            name: 'Movies'
                         },
                         {
-                            id: 'concert',
+                            id: 'monument',
                             name: 'Monuments'
 
                         },
                         {
-                            id: 'concert',
+                            id: 'museum',
                             name: 'Museums'
                         },
                         {
-                            id: 'concert',
+                            id: 'sport',
                             name: 'Sports'
                         }
                     ]

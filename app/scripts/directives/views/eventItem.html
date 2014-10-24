@@ -1,4 +1,4 @@
-<div class="event-item">
+<div class="event-item box effect2">
     <div class="event-item-header">
         <ul>
             <li>
@@ -14,11 +14,10 @@
     </div>
 
     <div class="event-item-picture col-xs-12"></div>
-    <p ng-bind-html="model.small_description"></p>
+    <div class="event-description">
+        <span ng-bind-html="getDescription()"></span>
+    </div>
     <p>
         <strong>Where?</strong> {{model.lieu}}
     </p>
-    <div class="event-item-footer">
-        <button ng-click="more()">MORE</button>
-    </div>
 </div>

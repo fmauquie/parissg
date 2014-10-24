@@ -16,9 +16,9 @@
             </li>
         </ul>
     </div>
-    <br/>
-    <p ng-bind-html="event.small_description"></p>
-
+    <div class="event-description">
+        <span ng-bind-html="getDescription()"></span>
+    </div>
     <div class="event-details-footer row">
         <div class="col-xs-6">
             <button class="btn  btn-block i-m-going" ng-click="subscribe()">

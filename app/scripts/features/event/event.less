@@ -3,9 +3,67 @@
   border: 1px #808080 dashed;
 }
 
+.box {
+  width:96%;
+  background:#FFF;
+  margin:40px auto;
+}
+
+/*==================================================
+ * Effect 2
+ * ===============================================*/
+.effect2
+{
+  position: relative;
+}
+.effect2:before, .effect2:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #000;
+  -webkit-box-shadow: 0 15px 10px #000;
+  -moz-box-shadow: 0 15px 10px #000;
+  box-shadow: 0 15px 10px #000;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.effect2:after
+{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+
 .event-item {
 
-  border: 1px #808080 dashed;
+  font-size: 11px;
+  border-radius: 3px;
+
+  background: #420001; /* Old browsers */
+  background: -moz-linear-gradient(top, #420001 42%, #b00004 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(42%, #420001), color-stop(100%, #b00004)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #420001 42%, #b00004 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #420001 42%, #b00004 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #420001 42%, #b00004 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #420001 42%, #b00004 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#420001', endColorstr='#b00004', GradientType=0); /* IE6-9 */
+
+  .event-item-header {
+    padding: 10px;
+  }
 
   .event-item-header ul {
     margin: 0;
@@ -17,12 +75,18 @@
     display: inline-block;
     list-style: none outside none;
     margin-right: 20px;
+    font-size: 13px;
+    text-shadow: 1px 1px 0x #000;
   }
 
   .event-item-picture {
+    background-image: url("villette.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 60px;
     align-content: center;
     min-height: 2em;
-    border: 1px #808080 dashed;
+
   }
 }
 

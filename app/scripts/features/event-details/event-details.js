@@ -44,9 +44,10 @@ define([ //
         .controller('app.features.event.details.controller', [ //
             '$scope', //
             '$routeParams', //
-            '$filter',
+            '$filter', //
             'activities', //
-            function ($scope, $routeParams, $filter, activitiesService) {
+            '$sce', //
+            function ($scope, $routeParams, $filter, activitiesService, $sce) {
 
 //                eventService.get({id: $routeParams.id}, function(event){
 //                    $scope.event = event;
@@ -67,6 +68,10 @@ define([ //
 
                 $scope.subscribe = function() {
 
+                };
+
+                $scope.getDescription = function(){
+                    return $scope.event ? $sce.trustAsHtml($scope.event.small_description) : '';
                 };
 
             }
