@@ -49,24 +49,24 @@ define([ //
         .controller('app.features.home.controller', [ //
             '$scope', //
             'activities', //
-            function ($scope, exampleService, activitiesService) {
+            function ($scope, activitiesService) {
 
-                exampleService.get().then(function(result){
+                /*exampleService.get().then(function(result){
                     $scope.hello = result.data.example;
                 });
-
-                /* var queryParmas = {
+*/
+                var queryParmas = {
                      date : '12345677',
-                     category : 'museum',
+                     category : 'monument',
                      geo: 'geo',
                      offset : 'offset',
                      limit : 'limit'
                  }
 
                 activitiesService.get(queryParmas).then(function(response){
-                    console.log("museum!")
+                    console.log("monument!")
                     console.dir(response);
-                });*/
+                });
 
                 // restangular HOWO TO here > http://stackoverflow.com/a/22496253
             }
