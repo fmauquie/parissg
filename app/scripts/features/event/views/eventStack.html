@@ -11,6 +11,12 @@
         </div>
     </div>
     <div ng-repeat="item in data">
-        <div event-item model="item" ng-swipe-left="more()" ng-swipe-right="dislike()" ng-show="item.display"></div>
+        <div event-item
+             class="item"
+             model="item"
+             ng-class="{'animate-like': item.like, 'animate-dislike': item.dislike}"
+             ng-swipe-left="more()"
+             ng-swipe-right="dislike()"
+             ng-show="item.display"></div>
     </div>
 </div>
